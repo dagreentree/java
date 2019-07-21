@@ -66,4 +66,42 @@ public class JdbcConfiguration {
 
 然后就可以在任意位置通过@Autowired注入DataSource了！
 
+### SpringBoot的属性注入
+java配置方式属性注入使用的是@Value注解。这种方式虽然可行，但是不够强大，因为它只能注入基本类型值。  
+在SpringBoot中，提供了一种新的属性注入方式，支持各种java基本数据类型及复杂类型的注入。
+* 新建JdbcProperties类，用来进行属性注入
+```
+@ConfigurationProperties(prefix = "jdbc")
+public class JdbcProperties {
+    private String url;
+    private String driverClassName;
+    private String username;
+    private String password;
+    // ... 略
+    // getters 和 setters
+}
+```
+* 在JdbcConfiguration中使用这个属性
+```
+@Configuration
+@EnableConfigurationProperties(JdbcProperties.class)
+public class JdbcConfiguration {
+
+    @Autowired
+    private JdbcProperties jdbcProperties;
+
+    @Bean
+    public DataSource dataSource() {
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setUrl(jdbcProperties.getUrl());
+        dataSource.setDriverClassName(jdbcProperties.getDriverClassName());
+        dataSource.setUsername(jdbcProperties.getUsername());
+        dataSource.setPassword(jdbcProperties.getPassword());
+        return dataSource;
+    }
+
+}
+```
+
+
 

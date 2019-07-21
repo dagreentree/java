@@ -10,4 +10,13 @@
   - `` @Bean``:生命在方法上，将方法的返回值加入Bean容器
   - `` @Value``:属性注入
   - `` @PropertySource``:指定外部属性文件
+### 连接池配置
+* 在pom中，引入Druid连接池依赖
+```java
+<dependency>
+    <groupId>com.github.drtrang</groupId>
+    <artifactId>druid-spring-boot2-starter</artifactId>
+    <version>1.1.10</version>
+</dependency>
+```
 

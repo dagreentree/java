@@ -1,2 +1,2 @@
 # SpringCloud简介
-`` java
+  ```java static

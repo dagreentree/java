@@ -12,7 +12,7 @@
   - `` @PropertySource``:指定外部属性文件
 ### 连接池配置
 * 在pom中，引入Druid连接池依赖
-```java
+```
 <dependency>
     <groupId>com.github.drtrang</groupId>
     <artifactId>druid-spring-boot2-starter</artifactId>

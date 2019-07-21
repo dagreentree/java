@@ -1,6 +1,7 @@
 * [默认配置原理](#默认配置原理)
   * [引导类](#引导类)
   * [java配置](#java配置)
+  * [SpringBoot的属性注入](#SpringBoot的属性注入)
 # 默认配置原理
 ### 引导类
 * springboot引导类@SpringBootApplication是多个注解共同组成  

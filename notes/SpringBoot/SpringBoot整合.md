@@ -4,6 +4,8 @@ SpringBoot整合
 * [添加拦截器](#添加拦截器)
 * [整合连接池](#整合连接池)
 * [整合mybatis](#整合mybatis)
+* [整合通用mapper](#整合通用mapper)
+* [整合事务](#整合事务)
 ----------------------
 ### 整合SpringMVC
 * 访问静态资源  
@@ -125,5 +127,39 @@ mybatis.type-aliases-package=cn.itcast.pojo
 mybatis.mapper-locations=classpath:mappers/*.xml
  ```
  
+ ### 整合通用mapper
+ ```
+ <dependency>
+    <groupId>tk.mybatis</groupId>
+    <artifactId>mapper-spring-boot-starter</artifactId>
+    <version>2.0.2</version>
+</dependency>
+ ```
+ 
+ 不需要做任何配置就可以使用了。
+ ```
+ @Mapper
+public interface UserMapper extends tk.mybatis.mapper.common.Mapper<User>{
+}
+ ```
+ 
+ ### 整合事务
+ ```
+ @Service
+public class UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    public User queryById(Long id){
+        return this.userMapper.selectByPrimaryKey(id);
+    }
+
+    @Transactional
+    public void deleteById(Long id){
+        this.userMapper.deleteByPrimaryKey(id);
+    }
+}
+ ```
  
  

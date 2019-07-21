@@ -102,6 +102,7 @@ public class JdbcConfiguration {
 
 }
 ```
+除了@Autowired注入方式外，还有构造函数注入、@Bean方法的参数注入
 
 
 

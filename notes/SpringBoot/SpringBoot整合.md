@@ -32,6 +32,8 @@ public class MyInterceptor implements HandlerInterceptor {
     }
 }
   ```
+  
+  
   * 定义配置类，注册拦截器
   ```
   @Configuration

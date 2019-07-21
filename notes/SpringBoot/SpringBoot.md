@@ -19,7 +19,7 @@
     <version>1.1.10</version>
 </dependency>
 ```
-* 添加数据源
+* 添加数据源  
 创建Jdbc.properties
 ```
 jdbc.driverClassName=com.mysql.jdbc.Driver
@@ -27,7 +27,7 @@ jdbc.url=jdbc:mysql://127.0.0.1:3306/leyou
 jdbc.username=root
 jdbc.password=123
 ```
-* 配置数据源
+* 配置数据源  
 创建JdbcConfiguration类
 ```
 @Configuration

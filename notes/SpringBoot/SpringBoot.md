@@ -6,5 +6,8 @@
   - @ComponentScan：开启注解扫描
 ### java配置
 * 常用注解
-  - `` java @Configuration ``：声明一个类作为配置类
+  - `` @Configuration ``:声明一个类作为配置类
+  - `` @Bean``:生命在方法上，将方法的返回值加入Bean容器
+  - `` @Value``:属性注入
+  - `` @PropertySource``:指定外部属性文件
 

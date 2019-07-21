@@ -1,3 +1,4 @@
+* [默认配置原理]()
 # 默认配置原理
 ### 引导类
 * springboot引导类@SpringBootApplication是多个注解共同组成  

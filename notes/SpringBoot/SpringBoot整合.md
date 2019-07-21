@@ -3,6 +3,7 @@ SpringBoot整合
 * [整合SpringMVC](#整合SpringMVC)
 * [添加拦截器](#添加拦截器)
 * [整合连接池](#整合连接池)
+* [整合mybatis](#整合mybatis)
 ----------------------
 ### 整合SpringMVC
 * 访问静态资源  
@@ -106,5 +107,23 @@ spring.datasource.druid.test-on-borrow=true
 #监控页面启动
 spring.datasource.druid.stat-view-servlet.allow=true
  ```
+ 
+ ### 整合mybatis
+ ```
+ <!--mybatis -->
+<dependency>
+    <groupId>org.mybatis.spring.boot</groupId>
+    <artifactId>mybatis-spring-boot-starter</artifactId>
+    <version>1.3.2</version>
+</dependency>
+ ```
+ 
+ ```
+ # mybatis 别名扫描
+mybatis.type-aliases-package=cn.itcast.pojo
+# mapper.xml文件位置,如果没有映射文件，请注释掉
+mybatis.mapper-locations=classpath:mappers/*.xml
+ ```
+ 
  
  

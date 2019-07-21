@@ -58,4 +58,13 @@ public class JdbcConfiguration {
     }
 }
 ```
+解读：
+
+- @Configuration：声明JdbcConfiguration是一个配置类。
+- @PropertySource：指定属性文件的路径是:classpath:jdbc.properties
+- 通过@Value为属性注入值。
+- 通过@Bean将 dataSource()方法声明为一个注册Bean的方法，Spring会自动调用该方法，将方法的返回值加入Spring容器中。相当于以前的bean标签
+
+然后就可以在任意位置通过@Autowired注入DataSource了！
+
 

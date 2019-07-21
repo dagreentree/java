@@ -19,4 +19,39 @@
     <version>1.1.10</version>
 </dependency>
 ```
+* 添加数据源
+创建Jdbc.properties
+```
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://127.0.0.1:3306/leyou
+jdbc.username=root
+jdbc.password=123
+```
+* 配置数据源
+创建JdbcConfiguration类
+```
+@Configuration
+@PropertySource("classpath:jdbc.properties")
+public class JdbcConfiguration {
+
+    @Value("${jdbc.url}")
+    String url;
+    @Value("${jdbc.driverClassName}")
+    String driverClassName;
+    @Value("${jdbc.username}")
+    String username;
+    @Value("${jdbc.password}")
+    String password;
+
+    @Bean
+    public DataSource dataSource() {
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setUrl(url);
+        dataSource.setDriverClassName(driverClassName);
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
+        return dataSource;
+    }
+}
+```
 

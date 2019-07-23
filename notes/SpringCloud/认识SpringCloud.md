@@ -16,7 +16,7 @@
     
   * Eureka注册中心
   原理图：
-  (https://github.com/dagreentree/java/blob/master/notes/SpringCloud/pic/1525597885059.png)
+  ![image](https://github.com/dagreentree/java/blob/master/notes/SpringCloud/pic/1525597885059.png)
 
     
     

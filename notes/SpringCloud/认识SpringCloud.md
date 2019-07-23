@@ -17,10 +17,10 @@
   * Eureka注册中心  
   原理图：  
   ![image](https://github.com/dagreentree/java/blob/master/notes/SpringCloud/pic/1525597885059.png)  
-  - Eureka：就是服务注册中心（可以是一个集群），对外暴露自己的地址
-  - 提供者：启动后向Eureka注册自己信息（地址，提供什么服务）
-  - 消费者：向Eureka订阅服务，Eureka会将对应服务的所有提供者地址列表发送给消费者，并且定期更新
-  - 心跳(续约)：提供者定期通过http方式向Eureka刷新自己的状态
+   - Eureka：就是服务注册中心（可以是一个集群），对外暴露自己的地址
+   - 提供者：启动后向Eureka注册自己信息（地址，提供什么服务）
+   - 消费者：向Eureka订阅服务，Eureka会将对应服务的所有提供者地址列表发送给消费者，并且定期更新
+   - 心跳(续约)：提供者定期通过http方式向Eureka刷新自己的状态
 
 
     

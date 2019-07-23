@@ -20,7 +20,20 @@
     - Eureka：就是服务注册中心（可以是一个集群），对外暴露自己的地址
     - 提供者：启动后向Eureka注册自己信息（地址，提供什么服务）
     - 消费者：向Eureka订阅服务，Eureka会将对应服务的所有提供者地址列表发送给消费者，并且定期更新
-    - 心跳(续约)：提供者定期通过http方式向Eureka刷新自己的状态
+    - 心跳(续约)：提供者定期通过http方式向Eureka刷新自己的状态  
+  
+ 编写application.yml配置：
+ ```
+ server:
+  port: 10086 # 端口
+spring:
+  application:
+    name: eureka-server # 应用名称，会在Eureka中显示
+eureka:
+  client:
+    service-url: # EurekaServer的地址，现在是自己的地址，如果是集群，需要加上其它Server的地址。
+      defaultZone: http://127.0.0.1:${server.port}/eureka
+ ```
 
 
     

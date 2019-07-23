@@ -34,6 +34,18 @@ eureka:
     service-url: # EurekaServer的地址，现在是自己的地址，如果是集群，需要加上其它Server的地址。
       defaultZone: http://127.0.0.1:${server.port}/eureka
  ```
+ 
+ 修改引导类，在类上添加@EnableEurekaServer注解：
+ ```
+ @SpringBootApplication
+@EnableEurekaServer // 声明当前springboot应用是一个eureka服务中心
+public class ItcastEurekaApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ItcastEurekaApplication.class, args);
+    }
+}
+ ```
 
 
     

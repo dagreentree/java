@@ -12,7 +12,11 @@
     
     版本：如Angel.SR6  
     版本名：是伦敦的地铁名 
-    版本号：SR（Service Releases）是固定的 ,大概意思是稳定版本。后面会有一个递增的数字。 
+    版本号：SR（Service Releases）是固定的 ,大概意思是稳定版本。后面会有一个递增的数字。
+    
+  * Eureka注册中心
+  原理图：
+  (https://github.com/dagreentree/java/blob/master/notes/SpringCloud/pic/1525597885059.png)
 
     
     

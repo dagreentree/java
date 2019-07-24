@@ -46,7 +46,58 @@ public class ItcastEurekaApplication {
     }
 }
  ```
+ 
+ * 注册到Eureka
+ 步骤：1、在pom.xml中，添加springcloud依赖；2、在application.yml中，添加springcloud的相关配置；3、在引导类上添加注解，把服务注入到eureka注册中心
+```
+<!-- SpringCloud的依赖 -->
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Finchley.SR2</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+<!-- Eureka客户端 -->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+```
+application.yml
+```
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/heima
+    username: root
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+  application:
+    name: service-provider # 应用名称，注册到eureka后的服务名称
+mybatis:
+  type-aliases-package: cn.itcast.service.pojo
+eureka:
+  client:
+    service-url: # EurekaServer地址
+      defaultZone: http://127.0.0.1:10086/eureka
+```
+引导类
+```
+@SpringBootApplication
+@EnableDiscoveryClient
+public class ItcastServiceProviderApplication {
 
+    public static void main(String[] args) {
+        SpringApplication.run(ItcastServiceApplication.class, args);
+    }
+}
+```
 
     
     

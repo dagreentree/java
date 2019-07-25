@@ -9,3 +9,22 @@
   触发Hystrix服务降级的情况：
     - 线程池已满
     - 请求超时
+    
+ * 实践  
+ 1、引入Hystrix依赖
+ ```
+ <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+</dependency>
+ ```
+ 
+ 2、开启熔断
+ 在主类上添加@EnableCircuitBreaker
+ 
+ Spring提供了一个组合注解：@SpringCloudApplication,是一下三个注解的组合：  
+ @SpringBootApplication  
+ @EnableDiscoveryClient
+ @EnableCircuitBreaker
+ 
+ 

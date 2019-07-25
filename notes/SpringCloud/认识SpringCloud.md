@@ -1,4 +1,6 @@
 * [服务调用方式](#服务调用方式)
+* [SpringCloud认识](#SpringCloud认识)
+* [负载均衡Ribbon](#负载均衡Ribbon)
 -----
 ### 服务调用方式
   * RPC和HTTP  
@@ -98,6 +100,8 @@ public class ItcastServiceProviderApplication {
     }
 }
 ```
+
+### 负载均衡Ribbon
 
     
     

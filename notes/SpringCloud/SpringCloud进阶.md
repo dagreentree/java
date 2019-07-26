@@ -27,4 +27,16 @@
  @EnableDiscoveryClient  
  @EnableCircuitBreaker
  
+ 3、设置超时  
+ Hystrix默认得超时时长为1，可通过设置修改这个值
+ ````
+ hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000 # 设置hystrix的超时时间为6000ms
+ ```
+ 
  

@@ -41,6 +41,7 @@
           thread:
             timeoutInMilliseconds: 6000 # 设置hystrix的超时时间为6000ms
  ```
+ 
  ### 服务熔断
  1、熔断的3个状态
  Closed:关闭状态，所有请求都正常访问  

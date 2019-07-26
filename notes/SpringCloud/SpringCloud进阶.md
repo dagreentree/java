@@ -1,5 +1,6 @@
 * [Hystrix](#Hystrix)
 * [服务降级](#服务降级)
+* [服务熔断](#服务熔断)
 ---------------
 ### Hystrix
 * 雪崩：服务器支持的线程和并发数有限，请求一直阻塞，会导致服务器资源耗尽，从而导致所有其它服务都不可用。
@@ -15,7 +16,7 @@
     
  * 实践  
  1、引入Hystrix依赖
- ```
+ ```xml
  <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>

@@ -24,7 +24,7 @@
  
  Spring提供了一个组合注解：@SpringCloudApplication,是一下三个注解的组合：  
  @SpringBootApplication  
- @EnableDiscoveryClient
+ @EnableDiscoveryClient  
  @EnableCircuitBreaker
  
  

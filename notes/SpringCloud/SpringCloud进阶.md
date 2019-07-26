@@ -32,7 +32,7 @@
  
  3、设置超时  
  Hystrix默认得超时时长为1，可通过设置修改这个值
- ````java
+ ```java
  hystrix:
   command:
     default:
@@ -40,7 +40,7 @@
         isolation:
           thread:
             timeoutInMilliseconds: 6000 # 设置hystrix的超时时间为6000ms
- ```
+ ```           
  
  ### 服务熔断
  1、熔断的3个状态

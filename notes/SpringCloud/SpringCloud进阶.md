@@ -33,7 +33,7 @@
  
  3、设置超时  
  Hystrix默认得超时时长为1，可通过设置修改这个值
- ```java
+ ```yml
  hystrix:
   command:
     default:

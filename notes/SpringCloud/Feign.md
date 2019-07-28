@@ -24,4 +24,6 @@ public interface UserClient {
     User queryById(@PathVariable("id") Long id);
 }
 ```
-说明：1、首先这是一个接口，Feign会通过动态代理，生成实现类；2、@FeignClient，声明这是一个Feign客户端，类似@Mapper注解。同时通过value属性指定服务名称；3、接口中的定义方法，完全采用SpringMVC的注解，Feign会根据注解帮我们生成URL，并访问获取结果
+说明：1、首先这是一个接口，Feign会通过动态代理，生成实现类；  
+2、``@FeignClient``，声明这是一个Feign客户端，类似@Mapper注解。同时通过value属性指定服务名称；  
+3、接口中的定义方法，完全采用SpringMVC的注解，Feign会根据注解帮我们生成URL，并访问获取结果
